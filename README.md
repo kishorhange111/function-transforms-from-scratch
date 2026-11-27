@@ -21,7 +21,7 @@ from minijax import np as jnp
 
 loss = lambda W, x, y: jnp.sum((jnp.tanh(x @ W) - y) ** 2)
 per_example = mj.jit(mj.vmap(mj.grad(loss), in_axes=(None, 0, 0)))  # (B, *W.shape)
-hvp = lambda f, x, v: mj.jvp(mj.grad(f), (x,), (v,))[1]            # forward-over-reverse
+hvp = lambda f, x, v: mj.jvp(mj.grad(f), (x,), (v,))[1]  # forward-over-reverse
 ```
 
 ## Design ([`src/minijax`](src/minijax))
