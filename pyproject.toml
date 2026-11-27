@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "function-transforms-from-scratch"
+version = "0.1.0"
+description = "JAX's composable function transformations from scratch on numpy: jvp, reverse mode as linearize + transpose, vmap, and jit with CSE/DCE and codegen, checked against torch.func."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Kishor Hange" }]
+dependencies = ["numpy>=1.26"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6", "torch>=2.6"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E741", "E731"]
+
+[tool.ruff.lint.per-file-ignores]
+"src/minijax/bench.py" = ["E501"]  # markdown table rows
