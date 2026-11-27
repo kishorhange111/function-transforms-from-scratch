@@ -1,0 +1,5 @@
+{"bench": "per_example", "batch": 8, "loop_s": 0.00259869999717921, "vmap_s": 0.00072160002309829, "jit_s": 0.0001419999753125012, "max_diff": 0.0}
+{"bench": "per_example", "batch": 32, "loop_s": 0.012002300005406141, "vmap_s": 0.002570500015281141, "jit_s": 0.0016391999670304358, "max_diff": 0.0}
+{"bench": "per_example", "batch": 128, "loop_s": 0.051517599960789084, "vmap_s": 0.009185399976558983, "jit_s": 0.005940300005022436, "max_diff": 0.0}
+{"bench": "jit", "eager_s": 0.0004323000321164727, "jit_s": 7.790001109242439e-05, "numpy_s": 0.00012969999806955457, "eqns_raw": 19, "eqns_opt": 14, "max_diff": 3.4416913763379853e-15}
+{"bench": "second_order", "n": 24, "hvp_fwd_rev": 0.0005472000339068472, "hvp_rev_rev": 0.0018794999923557043, "hess_fwd_rev": 0.0028046999941579998, "hess_rev_rev": 0.0033564000041224062, "eqns": {"hvp_fwd_rev": 39, "hvp_rev_rev": 24}, "max_diff_hvp": 1.1102230246251565e-16, "max_diff_hessian": 1.1102230246251565e-16}
